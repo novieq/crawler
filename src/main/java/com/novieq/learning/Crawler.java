@@ -54,20 +54,30 @@ public class Crawler implements Runnable {
                     Header header = response.getFirstHeader("Location");
                     String movedToUrl = header.getValue();
                     System.out.println(movedToUrl);
+                    header = null;
+                    movedToUrl = null;
              //       logger.info(movedToUrl);
                 }
             }
+            params = null;
+            httpClient = null;
+            httpGet = null;
+            response = null;
+            
             //System.out.println(statusCode);
             Thread.sleep(10000);
         } catch (ClientProtocolException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.out.println("ERROR"+e.getMessage());
+            //e.printStackTrace();
         } catch (IOException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("ERROR"+e.getMessage());
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("ERROR"+e.getMessage());
         } 
     }
 

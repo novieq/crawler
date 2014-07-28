@@ -17,7 +17,7 @@ public class CrawlController {
         for(int i=0;i<250000;i++) {
             arrayList.add(uri);
         }
-        start(Crawler.class,50,arrayList);
+        start(Crawler.class,100,arrayList);
         } catch(URISyntaxException ex) {
             
         }
