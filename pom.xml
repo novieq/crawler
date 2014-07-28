@@ -35,6 +35,20 @@
 			<target>1.7</target>
 		</configuration>
 	</plugin>
+	<plugin>
+            <groupId>org.apache.maven.plugins</groupId>                                               
+            <artifactId>maven-jar-plugin</artifactId>                                                 
+            <version>2.5</version>                                                                    
+            <configuration>                                                                           
+                <archive>
+                    <manifest>
+                        <addClasspath>true</addClasspath>
+                        <classpathPrefix>/User/sayghosh/code/crawler/target/</classpathPrefix>
+                        <mainClass>com.novieq.learning.CrawlerController</mainClass>     
+                    </manifest>                                                                       
+                </archive>
+            </configuration>                                                                          
+        </plugin>
 	</plugins>
 	</build>
 </project>

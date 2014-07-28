@@ -14,10 +14,10 @@ public class CrawlController {
         try {
         List<URI> arrayList = new ArrayList<>(50);
         URI uri = new URI("www.google.com");
-        for(int i=0;i<15000;i++) {
+        for(int i=0;i<250000;i++) {
             arrayList.add(uri);
         }
-        start(Crawler.class,500,arrayList);
+        start(Crawler.class,50,arrayList);
         } catch(URISyntaxException ex) {
             
         }
